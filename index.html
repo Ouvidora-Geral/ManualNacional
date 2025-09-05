@@ -1961,284 +1961,41 @@
         </div>
     </div>
 
-    <script>
-        // Dados do quiz atualizados
-        const quizData = {
-            easy: [
-                {
-                    question: "Qual o prazo total para resposta conclusiva às manifestações?",
-                    options: ["15 dias", "30 dias", "45 dias", "60 dias"],
-                    answer: 1,
-                    reference: "Art. 20º"
-                },
-                {
-                    question: "A quem a Ouvidoria deve estar subordinada?",
-                    options: [
-                        "À Presidência da Autarquia",
-                        "Ao setor jurídico",
-                        "À Comissão de Ética",
-                        "Ao Plenário do Cofen"
-                    ],
-                    answer: 0,
-                    reference: "Art. 3º"
-                },
-                {
-                    question: "Qual método classifica as denúncias por tipo?",
-                    options: ["DIA", "JALECO", "PROSA", "Nenhum dos anteriores"],
-                    answer: 1,
-                    reference: "Anexo II, II"
-                },
-                {
-                    question: "O que significa 'A' no método DIA?",
-                    options: ["Audiência", "Acompanhamento", "Análise", "Atendimento"],
-                    answer: 1,
-                    reference: "Anexo II, I.c"
-                },
-                {
-                    question: "Qual status indica manifestação aguardando complementação?",
-                    options: ["A DISTRIBUIR", "TRAMITANDO", "ENCAMINHADA", "RESPONDIDA"],
-                    answer: 1,
-                    reference: "Art. 18º, II"
-                }
-            ],
-            medium: [
-                {
-                    question: "Qual artigo trata da proteção de dados pessoais nas Ouvidorias?",
-                    options: ["Art. 10º", "Art. 25º", "Art. 30º", "Art. 35º"],
-                    answer: 2,
-                    reference: "Capítulo VIII"
-                },
-                {
-                    question: "Sobre denúncias anônimas, é correto afirmar:",
-                    options: [
-                        "Devem ser automaticamente arquivadas",
-                        "São tratadas como comunicação de irregularidade",
-                        "Exigem identificação completa do denunciante",
-                        "Têm prioridade no fluxo de análise"
-                    ],
-                    answer: 1,
-                    reference: "Art. 27º, §1º"
-                },
-                {
-                    question: "Qual destes NÃO é requisito para denúncias?",
-                    options: [
-                        "Elementos probatórios",
-                        "Dados de testemunhas",
-                        "Representação por advogado",
-                        "Informações complementares"
-                    ],
-                    answer: 2,
-                    reference: "Art. 25º, §1º"
-                },
-                {
-                    question: "O método PROSA inclui:",
-                    options: [
-                        "Priorização de denúncias",
-                        "Acompanhamento de prazos",
-                        "Classificação por assunto",
-                        "Análise de documentos"
-                    ],
-                    answer: 1,
-                    reference: "Anexo II, III.a"
-                },
-                {
-                    question: "Qual técnica é usada para proteção de dados?",
-                    options: [
-                        "Tarjamento",
-                        "Criptografia reversível",
-                        "Compactação",
-                        "Digitalização"
-                    ],
-                    answer: 0,
-                    reference: "Art. 33º"
-                }
-            ],
-            hard: [
-                {
-                    question: "Quantos dias tem o manifestante para complementar informações?",
-                    options: ["5 dias", "10 dias", "15 dias", "20 dias"],
-                    answer: 3,
-                    reference: "Art. 22º, §1º"
-                },
-                {
-                    question: "O que acontece se o manifestante não complementar a informação no prazo?",
-                    options: [
-                        "A manifestação é encaminhada sem análise",
-                        "A manifestação é arquivada por insuficiência",
-                        "O prazo é automaticamente prorrogado",
-                        "A Ouvidoria busca as informações complementares"
-                    ],
-                    answer: 1,
-                    reference: "Art. 22º, §3º"
-                },
-                {
-                    question: "Para qual instância são encaminhadas denúncias sobre Conselheiros?",
-                    options: [
-                        "Comissão de Ética",
-                        "Presidência do Cofen",
-                        "Corregedoria",
-                        "Assessoria Jurídica"
-                    ],
-                    answer: 1,
-                    reference: "Anexo II, II.e"
-                },
-                {
-                    question: "Qual princípio NÃO se aplica ao tratamento de denúncias?",
-                    options: [
-                        "Legalidade",
-                        "Proteção de dados",
-                        "Sigilo absoluto",
-                        "Respeito à dignidade"
-                    ],
-                    answer: 2,
-                    reference: "Art. 24º"
-                },
-                {
-                    question: "Quando uma manifestação pode ser reaberta após conclusão?",
-                    options: [
-                        "Quando o manifestante solicitar",
-                        "Se o processo interno continuar em tramitação",
-                        "Em casos de recursos administrativos",
-                        "Para correção de erros materiais"
-                    ],
-                    answer: 1,
-                    reference: "Art. 18º, VI"
-                }
-            ],
-            expert: [
-                {
-                    question: "Qual decreto regulamenta a Lei 13.460/2017 no âmbito federal?",
-                    options: [
-                        "Decreto 7.724/2012",
-                        "Decreto 9.094/2017",
-                        "Decreto 9.492/2018",
-                        "Decreto 10.890/2021"
-                    ],
-                    answer: 2,
-                    reference: "Preâmbulo"
-                },
-                {
-                    question: "Qual artigo estabelece as competências do Ouvidor?",
-                    options: [
-                        "Art. 7º",
-                        "Art. 10º",
-                        "Art. 14º",
-                        "Art. 18º"
-                    ],
-                    answer: 1,
-                    reference: "Capítulo IV"
-                },
-                {
-                    question: "Quantas etapas tem o fluxo de trabalho da Ouvidoria?",
-                    options: [
-                        "2 etapas",
-                        "3 etapas",
-                        "4 etapas",
-                        "5 etapas"
-                    ],
-                    answer: 1,
-                    reference: "Anexo II"
-                },
-                {
-                    question: "Qual destes NÃO é status de manifestação?",
-                    options: [
-                        "EM ANÁLISE",
-                        "TRAMITANDO",
-                        "ENCAMINHADA",
-                        "CONCLUÍDA"
-                    ],
-                    answer: 0,
-                    reference: "Anexo V"
-                },
-                {
-                    question: "Quem designa o Ouvidor Regional?",
-                    options: [
-                        "Plenário do Cofen",
-                        "Presidência do Conselho Regional",
-                        "Ouvidor-Geral do Cofen",
-                        "Assembleia Geral"
-                    ],
-                    answer: 1,
-                    reference: "Art. 12º"
-                }
-            ]
-        };
-
-        // Elementos DOM
+<script>
+    // Sistema de abas - CORREÇÃO
+    document.addEventListener('DOMContentLoaded', function() {
         const tabBtns = document.querySelectorAll('.tab-btn');
         const tabContents = document.querySelectorAll('.tab-content');
-        const chapterTabs = document.querySelectorAll('.chapter-tab');
-        const chapterContents = document.querySelectorAll('.chapter-content');
-        const difficultyScreen = document.querySelector('.quiz-intro');
-        const quizScreen = document.querySelector('.quiz-container');
-        const resultsScreen = document.getElementById('quiz-result');
-        const levelButtons = document.querySelectorAll('.level-btn');
-        const questionElement = document.getElementById('question');
-        const optionsElement = document.getElementById('options');
-        const currentElement = document.getElementById('current');
-        const totalElement = document.getElementById('total');
-        const scoreElement = document.getElementById('score');
-        const resultPercentElement = document.getElementById('result-percent');
-        const resultCircle = document.getElementById('result-circle');
-        const resultFeedback = document.getElementById('result-feedback');
-        const resultStars = document.getElementById('result-stars');
-        const prevButton = document.getElementById('prev-btn');
-        const nextButton = document.getElementById('next-btn');
-        const progressBar = document.getElementById('progress');
-        const feedbackContent = document.getElementById('feedback-content');
-
-        // Variáveis do quiz
-        let currentLevel = '';
-        let currentQuestions = [];
-        let currentQuestionIndex = 0;
-        let userScore = 0;
-        let userAnswers = [];
-        let selectedOption = null;
-        let autoAdvanceTimeout = null;
-
-        // Sistema de abas
+        
         tabBtns.forEach(btn => {
             btn.addEventListener('click', () => {
-                const tabId = btn.dataset.tab;
+                const tabId = btn.getAttribute('data-tab');
                 
+                // Remove a classe active de todos os botões e conteúdos
                 tabBtns.forEach(b => b.classList.remove('active'));
                 tabContents.forEach(c => c.classList.remove('active'));
                 
+                // Adiciona a classe active ao botão clicado
                 btn.classList.add('active');
-                document.getElementById(`${tabId}-tab`).classList.add('active');
                 
-                document.querySelectorAll('.section-content').forEach(content => {
-                    content.classList.remove('active');
-                    const icon = content.previousElementSibling.querySelector('.fa-chevron-down');
-                    icon.classList.remove('fa-chevron-up');
-                    icon.classList.add('fa-chevron-down');
-                });
-                
-                if (tabId === 'quiz') {
-                    resetQuiz();
+                // Mostra o conteúdo correspondente
+                const tabContent = document.getElementById(`${tabId}-tab`);
+                if (tabContent) {
+                    tabContent.classList.add('active');
+                    
+                    // Se for a aba do quiz, reseta o quiz
+                    if (tabId === 'quiz') {
+                        resetQuiz();
+                    }
                 }
-            });
-        });
-
-        // Sistema de abas de capítulos
-        chapterTabs.forEach(tab => {
-            tab.addEventListener('click', () => {
-                const chapterId = tab.dataset.chapter;
-                
-                chapterTabs.forEach(t => t.classList.remove('active'));
-                chapterContents.forEach(c => c.classList.remove('active'));
-                
-                tab.classList.add('active');
-                document.getElementById(chapterId).classList.add('active');
-                
-                // Scroll suave para o topo do conteúdo do capítulo
-                document.getElementById(chapterId).scrollIntoView({ behavior: 'smooth', block: 'start' });
             });
         });
 
         // Funções para Material de Estudo
         function toggleSection(sectionId) {
             const content = document.getElementById(`${sectionId}-content`);
+            if (!content) return;
+            
             const icon = content.previousElementSibling.querySelector('.fa-chevron-down');
             
             if (content.classList.contains('active')) {
@@ -2252,7 +2009,38 @@
             }
         }
         
-        function showFlowInfo(step) {
+        // Adiciona event listeners para as seções
+        document.querySelectorAll('.section-header').forEach(header => {
+            header.addEventListener('click', function() {
+                const sectionId = this.getAttribute('onclick').replace("toggleSection('", "").replace("')", "");
+                toggleSection(sectionId);
+            });
+        });
+
+        // Sistema de abas de capítulos
+        const chapterTabs = document.querySelectorAll('.chapter-tab');
+        const chapterContents = document.querySelectorAll('.chapter-content');
+        
+        chapterTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const chapterId = tab.getAttribute('data-chapter');
+                
+                chapterTabs.forEach(t => t.classList.remove('active'));
+                chapterContents.forEach(c => c.classList.remove('active'));
+                
+                tab.classList.add('active');
+                document.getElementById(chapterId).classList.add('active');
+                
+                // Scroll suave para o topo do conteúdo do capítulo
+                document.getElementById(chapterId).scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+        });
+
+        // Abre a primeira seção por padrão
+        toggleSection('Manual');
+        
+        // Função para mostrar informações do fluxo
+        window.showFlowInfo = function(step) {
             const flowInfo = document.getElementById('flow-info');
             const title = document.getElementById('flow-title');
             const description = document.getElementById('flow-description');
@@ -2285,141 +2073,329 @@
                     description.textContent = 'A manifestação é finalizada no sistema após envio da resposta. Poderá ser reaberta se o processo interno permanecer em tramitação (Art. 18º, VI). O manifestante recebe formulário para avaliação do atendimento (Art. 19º, §2º).';
                     break;
             }
+        };
+    });
+
+    // Dados do quiz atualizados
+    const quizData = {
+        easy: [
+            {
+                question: "Qual o prazo total para resposta conclusiva às manifestações?",
+                options: ["15 dias", "30 dias", "45 dias", "60 dias"],
+                answer: 1,
+                reference: "Art. 20º"
+            },
+            {
+                question: "A quem a Ouvidoria deve estar subordinada?",
+                options: [
+                    "À Presidência da Autarquia",
+                    "Ao setor jurídico",
+                    "À Comissão de Ética",
+                    "Ao Plenário do Cofen"
+                ],
+                answer: 0,
+                reference: "Art. 3º"
+            },
+            {
+                question: "Qual método classifica as denúncias por tipo?",
+                options: ["DIA", "JALECO", "PROSA", "Nenhum dos anteriores"],
+                answer: 1,
+                reference: "Anexo II, II"
+            },
+            {
+                question: "O que significa 'A' no método DIA?",
+                options: ["Audiência", "Acompanhamento", "Análise", "Atendimento"],
+                answer: 1,
+                reference: "Anexo II, I.c"
+            },
+            {
+                question: "Qual status indica manifestação aguardando complementação?",
+                options: ["A DISTRIBUIR", "TRAMITANDO", "ENCAMINHADA", "RESPONDIDA"],
+                answer: 1,
+                reference: "Art. 18º, II"
+            }
+        ],
+        medium: [
+            {
+                question: "Qual artigo trata da proteção de dados pessoais nas Ouvidorias?",
+                options: ["Art. 10º", "Art. 25º", "Art. 30º", "Art. 35º"],
+                answer: 2,
+                reference: "Capítulo VIII"
+            },
+            {
+                question: "Sobre denúncias anônimas, é correto afirmar:",
+                options: [
+                    "Devem ser automaticamente arquivadas",
+                    "São tratadas como comunicação de irregularidade",
+                    "Exigem identificação completa do denunciante",
+                    "Têm prioridade no fluxo de análise"
+                ],
+                answer: 1,
+                reference: "Art. 27º, §1º"
+            },
+            {
+                question: "Qual destes NÃO é requisito para denúncias?",
+                options: [
+                    "Elementos probatórios",
+                    "Dados de testemunhas",
+                    "Representação por advogado",
+                    "Informações complementares"
+                ],
+                answer: 2,
+                reference: "Art. 25º, §1º"
+            },
+            {
+                question: "O método PROSA inclui:",
+                options: [
+                    "Priorização de denúncias",
+                    "Acompanhamento de prazos",
+                    "Classificação por assunto",
+                    "Análise de documentos"
+                ],
+                answer: 1,
+                reference: "Anexo II, III.a"
+            },
+            {
+                question: "Qual técnica é usada para proteção de dados?",
+                options: [
+                    "Tarjamento",
+                    "Criptografia reversível",
+                    "Compactação",
+                    "Digitalização"
+                ],
+                answer: 0,
+                reference: "Art. 33º"
+            }
+        ],
+        hard: [
+            {
+                question: "Quantos dias tem o manifestante para complementar informações?",
+                options: ["5 dias", "10 dias", "15 dias", "20 dias"],
+                answer: 3,
+                reference: "Art. 22º, §1º"
+            },
+            {
+                question: "O que acontece se o manifestante não complementar a informação no prazo?",
+                options: [
+                    "A manifestação é encaminhada sem análise",
+                    "A manifestação é arquivada por insuficiência",
+                    "O prazo é automaticamente prorrogado",
+                    "A Ouvidoria busca as informações complementares"
+                ],
+                answer: 1,
+                reference: "Art. 22º, §3º"
+            },
+            {
+                question: "Para qual instância são encaminhadas denúncias sobre Conselheiros?",
+                options: [
+                    "Comissão de Ética",
+                    "Presidência do Cofen",
+                    "Corregedoria",
+                    "Assessoria Jurídica"
+                ],
+                answer: 1,
+                reference: "Anexo II, II.e"
+            },
+            {
+                question: "Qual princípio NÃO se aplica ao tratamento de denúncias?",
+                options: [
+                    "Legalidade",
+                    "Proteção de dados",
+                    "Sigilo absoluto",
+                    "Respeito à dignidade"
+                ],
+                answer: 2,
+                reference: "Art. 24º"
+            },
+            {
+                question: "Quando uma manifestação pode ser reaberta após conclusão?",
+                options: [
+                    "Quando o manifestante solicitar",
+                    "Se o processo interno continuar em tramitação",
+                    "Em casos de recursos administrativos",
+                    "Para correção de erros materiais"
+                ],
+                answer: 1,
+                reference: "Art. 18º, VI"
+            }
+        ],
+        expert: [
+            {
+                question: "Qual decreto regulamenta a Lei 13.460/2017 no âmbito federal?",
+                options: [
+                    "Decreto 7.724/2012",
+                    "Decreto 9.094/2017",
+                    "Decreto 9.492/2018",
+                    "Decreto 10.890/2021"
+                ],
+                answer: 2,
+                reference: "Preâmbulo"
+            },
+            {
+                question: "Qual artigo estabelece as competências do Ouvidor?",
+                options: [
+                    "Art. 7º",
+                    "Art. 10º",
+                    "Art. 14º",
+                    "Art. 18º"
+                ],
+                answer: 1,
+                reference: "Capítulo IV"
+            },
+            {
+                question: "Quantas etapas tem o fluxo de trabalho da Ouvidoria?",
+                options: [
+                    "2 etapas",
+                    "3 etapas",
+                    "4 etapas",
+                    "5 etapas"
+                ],
+                answer: 1,
+                reference: "Anexo II"
+            },
+            {
+                question: "Qual destes NÃO é status de manifestação?",
+                options: [
+                    "EM ANÁLISE",
+                    "TRAMITANDO",
+                    "ENCAMINHADA",
+                    "CONCLUÍDA"
+                ],
+                answer: 0,
+                reference: "Anexo V"
+            },
+            {
+                question: "Quem designa o Ouvidor Regional?",
+                options: [
+                    "Plenário do Cofen",
+                    "Presidência do Conselho Regional",
+                    "Ouvidor-Geral do Cofen",
+                    "Assembleia Geral"
+                ],
+                answer: 1,
+                reference: "Art. 12º"
+            }
+        ]
+    };
+
+    // Elementos DOM
+    const difficultyScreen = document.querySelector('.quiz-intro');
+    const quizScreen = document.querySelector('.quiz-container');
+    const resultsScreen = document.getElementById('quiz-result');
+    const levelButtons = document.querySelectorAll('.level-btn');
+    const questionElement = document.getElementById('question');
+    const optionsElement = document.getElementById('options');
+    const currentElement = document.getElementById('current');
+    const totalElement = document.getElementById('total');
+    const scoreElement = document.getElementById('score');
+    const resultPercentElement = document.getElementById('result-percent');
+    const resultCircle = document.getElementById('result-circle');
+    const resultFeedback = document.getElementById('result-feedback');
+    const resultStars = document.getElementById('result-stars');
+    const prevButton = document.getElementById('prev-btn');
+    const nextButton = document.getElementById('next-btn');
+    const progressBar = document.getElementById('progress');
+    const feedbackContent = document.getElementById('feedback-content');
+
+    // Variáveis do quiz
+    let currentLevel = '';
+    let currentQuestions = [];
+    let currentQuestionIndex = 0;
+    let userScore = 0;
+    let userAnswers = [];
+    let selectedOption = null;
+    let autoAdvanceTimeout = null;
+
+    // Funções do Quiz
+    function getRandomQuestions(level, count) {
+        const allQuestions = [...quizData[level]];
+        const shuffled = allQuestions.sort(() => 0.5 - Math.random());
+        return shuffled.slice(0, count);
+    }
+
+    levelButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            currentLevel = button.getAttribute('data-level');
+            startQuiz(currentLevel);
+        });
+    });
+
+    function resetQuiz() {
+        difficultyScreen.style.display = 'block';
+        quizScreen.style.display = 'none';
+        resultsScreen.style.display = 'none';
+        clearAutoAdvance();
+    }
+
+    function clearAutoAdvance() {
+        if (autoAdvanceTimeout) {
+            clearTimeout(autoAdvanceTimeout);
+            autoAdvanceTimeout = null;
+        }
+    }
+
+    function startQuiz(level) {
+        currentQuestions = getRandomQuestions(level, 5);
+        currentQuestionIndex = 0;
+        userScore = 0;
+        userAnswers = [];
+        
+        difficultyScreen.style.display = 'none';
+        quizScreen.style.display = 'block';
+        resultsScreen.style.display = 'none';
+        
+        updateQuestion();
+        updateProgress();
+    }
+
+    function updateQuestion() {
+        const currentQuestion = currentQuestions[currentQuestionIndex];
+        
+        questionElement.textContent = currentQuestion.question;
+        optionsElement.innerHTML = '';
+        
+        currentElement.textContent = currentQuestionIndex + 1;
+        totalElement.textContent = currentQuestions.length;
+        scoreElement.textContent = userScore;
+        
+        currentQuestion.options.forEach((option, index) => {
+            const optionElement = document.createElement('div');
+            optionElement.classList.add('option');
+            optionElement.textContent = option;
+            
+            if (userAnswers[currentQuestionIndex] === index) {
+                optionElement.classList.add('selected');
+                selectedOption = optionElement;
+                
+                if (userAnswers[currentQuestionIndex] !== undefined) {
+                    showAnswerFeedback();
+                }
+            }
+            
+            optionElement.addEventListener('click', () => selectOption(optionElement, index));
+            optionsElement.appendChild(optionElement);
+        });
+        
+        prevButton.disabled = currentQuestionIndex === 0;
+        nextButton.textContent = currentQuestionIndex === currentQuestions.length - 1 ? 'Finalizar' : 'Próxima';
+    }
+
+    function selectOption(optionElement, optionIndex) {
+        if (userAnswers[currentQuestionIndex] !== undefined) return;
+        
+        if (selectedOption) {
+            selectedOption.classList.remove('selected');
         }
         
-        document.addEventListener('DOMContentLoaded', function() {
-            toggleSection('Manual');
-        });
-
-        // Funções do Quiz
-        function getRandomQuestions(level, count) {
-            const allQuestions = [...quizData[level]];
-            const shuffled = allQuestions.sort(() => 0.5 - Math.random());
-            return shuffled.slice(0, count);
-        }
-
-        levelButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                currentLevel = button.dataset.level;
-                startQuiz(currentLevel);
-            });
-        });
-
-        function resetQuiz() {
-            difficultyScreen.style.display = 'block';
-            quizScreen.style.display = 'none';
-            resultsScreen.style.display = 'none';
-            clearAutoAdvance();
-        }
-
-        function clearAutoAdvance() {
-            if (autoAdvanceTimeout) {
-                clearTimeout(autoAdvanceTimeout);
-                autoAdvanceTimeout = null;
-            }
-        }
-
-        function startQuiz(level) {
-            currentQuestions = getRandomQuestions(level, 5);
-            currentQuestionIndex = 0;
-            userScore = 0;
-            userAnswers = [];
-            
-            difficultyScreen.style.display = 'none';
-            quizScreen.style.display = 'block';
-            resultsScreen.style.display = 'none';
-            
-            updateQuestion();
-            updateProgress();
-        }
-
-        function updateQuestion() {
-            const currentQuestion = currentQuestions[currentQuestionIndex];
-            
-            questionElement.textContent = currentQuestion.question;
-            optionsElement.innerHTML = '';
-            
-            currentElement.textContent = currentQuestionIndex + 1;
-            totalElement.textContent = currentQuestions.length;
-            scoreElement.textContent = userScore;
-            
-            currentQuestion.options.forEach((option, index) => {
-                const optionElement = document.createElement('div');
-                optionElement.classList.add('option');
-                optionElement.textContent = option;
-                
-                if (userAnswers[currentQuestionIndex] === index) {
-                    optionElement.classList.add('selected');
-                    selectedOption = optionElement;
-                    
-                    if (userAnswers[currentQuestionIndex] !== undefined) {
-                        showAnswerFeedback();
-                    }
-                }
-                
-                optionElement.addEventListener('click', () => selectOption(optionElement, index));
-                optionsElement.appendChild(optionElement);
-            });
-            
-            prevButton.disabled = currentQuestionIndex === 0;
-            nextButton.textContent = currentQuestionIndex === currentQuestions.length - 1 ? 'Finalizar' : 'Próxima';
-        }
-
-        function selectOption(optionElement, optionIndex) {
-            if (userAnswers[currentQuestionIndex] !== undefined) return;
-            
-            if (selectedOption) {
-                selectedOption.classList.remove('selected');
-            }
-            
-            optionElement.classList.add('selected');
-            selectedOption = optionElement;
-            
-            userAnswers[currentQuestionIndex] = optionIndex;
-            
-            showAnswerFeedback();
-            
-            clearAutoAdvance();
-            autoAdvanceTimeout = setTimeout(() => {
-                if (currentQuestionIndex < currentQuestions.length - 1) {
-                    currentQuestionIndex++;
-                    updateQuestion();
-                    updateProgress();
-                } else {
-                    showResults();
-                }
-            }, 1000);
-        }
-
-        function showAnswerFeedback() {
-            const currentQuestion = currentQuestions[currentQuestionIndex];
-            const options = optionsElement.querySelectorAll('.option');
-            const userAnswer = userAnswers[currentQuestionIndex];
-            
-            options.forEach((option, index) {
-                option.classList.remove('correct', 'incorrect');
-                
-                if (index === currentQuestion.answer) {
-                    option.classList.add('correct');
-                } else if (index === userAnswer && index !== currentQuestion.answer) {
-                    option.classList.add('incorrect');
-                }
-            });
-            
-            if (userAnswer === currentQuestion.answer && !currentQuestion.answered) {
-                userScore++;
-                currentQuestion.answered = true;
-                scoreElement.textContent = userScore;
-            }
-        }
-
-        function updateProgress() {
-            const progress = ((currentQuestionIndex + 1) / currentQuestions.length) * 100;
-            progressBar.style.width = `${progress}%`;
-        }
-
-        nextButton.addEventListener('click', () => {
-            clearAutoAdvance();
+        optionElement.classList.add('selected');
+        selectedOption = optionElement;
+        
+        userAnswers[currentQuestionIndex] = optionIndex;
+        
+        showAnswerFeedback();
+        
+        clearAutoAdvance();
+        autoAdvanceTimeout = setTimeout(() => {
             if (currentQuestionIndex < currentQuestions.length - 1) {
                 currentQuestionIndex++;
                 updateQuestion();
@@ -2427,76 +2403,115 @@
             } else {
                 showResults();
             }
-        });
+        }, 1000);
+    }
 
-        prevButton.addEventListener('click', () => {
-            clearAutoAdvance();
-            if (currentQuestionIndex > 0) {
-                currentQuestionIndex--;
-                updateQuestion();
-                updateProgress();
+    function showAnswerFeedback() {
+        const currentQuestion = currentQuestions[currentQuestionIndex];
+        const options = optionsElement.querySelectorAll('.option');
+        const userAnswer = userAnswers[currentQuestionIndex];
+        
+        options.forEach((option, index) => {
+            option.classList.remove('correct', 'incorrect');
+            
+            if (index === currentQuestion.answer) {
+                option.classList.add('correct');
+            } else if (index === userAnswer && index !== currentQuestion.answer) {
+                option.classList.add('incorrect');
             }
         });
-
-        function showResults() {
-            const finalScore = Math.round((userScore / currentQuestions.length) * 100);
-            
-            quizScreen.style.display = 'none';
-            resultsScreen.style.display = 'block';
-            
-            resultPercentElement.textContent = `${finalScore}%`;
-            resultCircle.style.setProperty('--percentage', `${finalScore}%`);
-            
-            if (finalScore >= 90) {
-                resultFeedback.textContent = "Excelente! Domínio completo do Manual das Ouvidorias.";
-                resultStars.innerHTML = '<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>';
-            } else if (finalScore >= 70) {
-                resultFeedback.textContent = "Muito bom! Bom conhecimento dos procedimentos.";
-                resultStars.innerHTML = '<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>';
-            } else if (finalScore >= 50) {
-                resultFeedback.textContent = "Bom! Revise os pontos de melhoria.";
-                resultStars.innerHTML = '<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>';
-            } else {
-                resultFeedback.textContent = "Continue estudando! Consulte o Material de Estudo.";
-                resultStars.innerHTML = '<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>';
-            }
-            
-            generateMethodFeedback();
+        
+        if (userAnswer === currentQuestion.answer && !currentQuestion.answered) {
+            userScore++;
+            currentQuestion.answered = true;
+            scoreElement.textContent = userScore;
         }
+    }
 
-        function generateMethodFeedback() {
-            let feedbackHTML = '';
+    function updateProgress() {
+        const progress = ((currentQuestionIndex + 1) / currentQuestions.length) * 100;
+        progressBar.style.width = `${progress}%`;
+    }
+
+    nextButton.addEventListener('click', () => {
+        clearAutoAdvance();
+        if (currentQuestionIndex < currentQuestions.length - 1) {
+            currentQuestionIndex++;
+            updateQuestion();
+            updateProgress();
+        } else {
+            showResults();
+        }
+    });
+
+    prevButton.addEventListener('click', () => {
+        clearAutoAdvance();
+        if (currentQuestionIndex > 0) {
+            currentQuestionIndex--;
+            updateQuestion();
+            updateProgress();
+        }
+    });
+
+    function showResults() {
+        const finalScore = Math.round((userScore / currentQuestions.length) * 100);
+        
+        quizScreen.style.display = 'none';
+        resultsScreen.style.display = 'block';
+        
+        resultPercentElement.textContent = `${finalScore}%`;
+        resultCircle.style.setProperty('--percentage', `${finalScore}%`);
+        
+        if (finalScore >= 90) {
+            resultFeedback.textContent = "Excelente! Domínio completo do Manual das Ouvidorias.";
+            resultStars.innerHTML = '<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>';
+        } else if (finalScore >= 70) {
+            resultFeedback.textContent = "Muito bom! Bom conhecimento dos procedimentos.";
+            resultStars.innerHTML = '<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>';
+        } else if (finalScore >= 50) {
+            resultFeedback.textContent = "Bom! Revise os pontos de melhoria.";
+            resultStars.innerHTML = '<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>';
+        } else {
+            resultFeedback.textContent = "Continue estudando! Consulte o Material de Estudo.";
+            resultStars.innerHTML = '<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>';
+        }
+        
+        generateMethodFeedback();
+    }
+
+    function generateMethodFeedback() {
+        let feedbackHTML = '';
+        
+        currentQuestions.forEach((question, index) => {
+            const userAnswer = userAnswers[index];
+            const isCorrect = userAnswer === question.answer;
             
-            currentQuestions.forEach((question, index) => {
-                const userAnswer = userAnswers[index];
-                const isCorrect = userAnswer === question.answer;
-                
-                feedbackHTML += `
-                    <div class="feedback-item">
-                        <div class="feedback-question">${index + 1}. ${question.question}</div>
-                        <div class="feedback-answer ${isCorrect ? 'correct-answer' : 'incorrect-answer'}">
-                            Sua resposta: ${question.options[userAnswer]}
-                            <i class="fas fa-${isCorrect ? 'check' : 'times'} feedback-icon"></i>
-                        </div>
-                        ${!isCorrect ? `
-                        <div class="feedback-answer correct-answer">
-                            Resposta correta: ${question.options[question.answer]}
-                            <i class="fas fa-check feedback-icon"></i>
-                            <p><small>Referência: ${question.reference}</small></p>
-                        </div>
-                        ` : ''}
+            feedbackHTML += `
+                <div class="feedback-item">
+                    <div class="feedback-question">${index + 1}. ${question.question}</div>
+                    <div class="feedback-answer ${isCorrect ? 'correct-answer' : 'incorrect-answer'}">
+                        Sua resposta: ${question.options[userAnswer]}
+                        <i class="fas fa-${isCorrect ? 'check' : 'times'} feedback-icon"></i>
                     </div>
-                `;
-            });
-            
-            feedbackContent.innerHTML = feedbackHTML;
-        }
+                    ${!isCorrect ? `
+                    <div class="feedback-answer correct-answer">
+                        Resposta correta: ${question.options[question.answer]}
+                        <i class="fas fa-check feedback-icon"></i>
+                        <p><small>Referência: ${question.reference}</small></p>
+                    </div>
+                    ` : ''}
+                </div>
+            `;
+        });
+        
+        feedbackContent.innerHTML = feedbackHTML;
+    }
 
-        function restartQuiz() {
-            resultsScreen.style.display = 'none';
-            difficultyScreen.style.display = 'block';
-            startQuiz(currentLevel);
-        }
-    </script>
+    window.restartQuiz = function() {
+        resultsScreen.style.display = 'none';
+        difficultyScreen.style.display = 'block';
+        startQuiz(currentLevel);
+    };
+</script>
 </body>
 </html>
